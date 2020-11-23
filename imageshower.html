@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image shower</title>
+    <script type = "text/javascript"
+    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <style>
+        *{
+            padding: 0;
+            
+            margin: 0;
+        }
+        body{
+            width: 302px;
+            height: auto;
+            margin: auto;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container{
+            height: 90vh;
+            overflow: hidden;
+            width: 300px;
+            background-image:url('wallpaper1.jpg') ;
+            background-size:cover ;
+            border-style: groove;
+            box-shadow: 0px 3px 3px 4px black;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 40px;
+            z-index: -1;
+        }
+        .top{
+            height: 3vh;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            position: relative;
+        }
+        .notification{
+            color: white;
+            margin-top: 5px;
+        }
+        .camera{
+            height: 15px;
+            width: 15px;
+            background-color: black;
+            border-radius: 50%;
+            margin-top: 5px;
+            float: left;
+            margin-left: -10px;
+        }
+        .battery{
+            border: 1px solid white ;
+            height: 10px;
+            width: 20px;
+            font-size:10px ;
+            color: white;
+            float: right;
+            margin-top: 5px;
+        }
+        #main{
+            background-color: transparent;
+            height: 90vh;
+            width: 100%;
+            position: relative;
+        }
+        .main-body{
+            height:75vh ;
+            width: 100%;
+            background-color: transparent;
+            flex-direction: column;
+        }
+        .bottom{
+            margin-top: 2vh;
+            background-color: transparent;
+            width: 100%;
+            height: 10vh;
+            float: left;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+        }
+        .app-btn{
+            height: 45px;
+            width: 45px;
+            border-radius: 20%;
+            overflow: hidden;
+            outline-style: none;
+            float: left;
+            background-color: white;
+            margin: 5px;
+        }
+        #menu{
+            height: 90vh;
+            width: 100%;
+            display: block;
+        }
+        .app-menu{
+            height: 80vh;
+            padding-top: 3vh;
+            width: 100%;
+            background-color: inherit;
+            float: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+        }
+        .back{
+            width: 100%;
+            height: 4vh;
+            background-color: inherit;
+            float: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            overflow: hidden;
+        }
+        .back-btn{
+            height: 30px;
+            width:30px;
+        }
+        #image{
+            height: 90vh;
+            width: 100%;
+            display: block;
+        }
+        .image-show{
+            margin-top:1vh;
+            height:78vh;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 1vh;
+        }
+        input{
+            height: 20px;
+            width: 200px;
+            float: left;
+            margin: auto;
+        }
+        .image{
+            height: 150px;
+            width: 300px;
+            background-color:transparent;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="main">
+            <div class="top">
+                <div class="notification">11:55  ..</div>
+                <div class="camera"></div>
+                <div class="battery">55%</div>
+            </div>
+            <div class="main-body"></div>
+            <div class="bottom">
+                <div class="app-btn"><img src="caller.png" alt=""></div>
+                <div class="app-btn"><img src="messenger.png" alt=""></div>
+                <a href="#menu"><div class="app-btn"><img src="menu.png" alt=""></div></a>
+            </div>
+        </div>
+        <div id="menu">
+            <div class="top">
+                <div class="notification">11:55  ..</div>
+                <div class="camera"></div>
+                <div class="battery">55%</div>
+            </div>
+            <div class="app-menu">
+                <div class="app-btn"><a href="#image"><img src="image.png" alt=""></div></a>
+                <div class="app-btn"><img src="messenger.png" alt=""></div>
+                <div class="app-btn"><img src="candycrush.png" alt=""></div>
+                <div class="app-btn"><img src="facebook.png" alt=""></div>
+                <div class="app-btn"><img src="google.png" alt=""></div>
+                <div class="app-btn"><img src="pubg.png" alt=""></div>
+                <div class="app-btn"><img src="snapchat.png" alt=""></div>
+                <div class="app-btn"><img src="tiktok.png" alt=""></div>
+                <div class="app-btn"><img src="twiter.png" alt=""></div>
+                <div class="app-btn"><img src="insta.png" alt=""></div>
+                <div class="app-btn"><img src="telegram.png" alt=""></div>
+                <div class="app-btn"><img src="gallery.png" alt=""></div>
+                <div class="app-btn"><img src="youtube.png" alt=""></div>
+                <div class="app-btn"><img src="camera.png" alt=""></div>
+                <div class="app-btn"><img src="video.png" alt=""></div>
+                <div class="app-btn"><img src="messege.png" alt=""></div>
+                <div class="app-btn"><img src="caller.png" alt=""></div>
+                <div class="app-btn"><img src="calender.png" alt=""></div>
+                <div class="app-btn"><img src="contact.png" alt=""></div>
+                <div class="app-btn"><img src="compass.png" alt=""></div>
+                <div class="app-btn"><img src="discord.png" alt=""></div>
+                <div class="app-btn"><img src="daraz.png" alt=""></div>
+                <div class="app-btn"><img src="file.png" alt=""></div>
+                <div class="app-btn"><img src="radio.png" alt=""></div>
+                <div class="app-btn"><img src="freefire.png" alt=""></div>
+                <div class="app-btn"><img src="alibaba.png" alt=""></div>
+                <div class="app-btn"><img src="hamro.png" alt=""></div>
+                <div class="app-btn"><img src="calculator.png" alt=""></div>
+                <div class="app-btn"><img src="vpn.png" alt=""></div>
+                <div class="app-btn"><img src="music.png" alt=""></div>
+            </div>
+            <div class="back">
+                <a href="#main"><div class="back-btn"><img src="back.png" alt=""></div></a>
+                <a href="#main"><div class="back-btn"><img src="home.png" alt=""></div></a>
+                <div class="back-btn"></div>
+            </div>
+        </div>
+        <div id="image">
+            <div class="top">
+                <div class="notification">11:55  ..</div>
+                <div class="camera"></div>
+                <div class="battery">55%</div>
+            </div>
+            <div class="image-show">
+                <input type="button" name="first-btn" id="btn-1" class="btn" value="-">  
+                <div class="image"  id="image1"><img  src="img1.jpg" alt=""></div>
+                <input type="button" name="first-btn" id="btn-2" class="btn" value="+">
+                <div class="image" style="display: none;" id="image2"><img  src="img2.jpg" alt=""></div>
+                <input type="button" name="first-btn" id="btn-3" class="btn" value="+"> 
+                <div class="image" style="display: none;" id="image3"><img  src="img3.jpg" alt=""></div>
+            </div>
+            <div class="back">
+                <a href="#main"><div class="back-btn"><img src="back.png" alt=""></div></a>
+                <a href="#main"><div class="back-btn"><img src="home.png" alt=""></div></a>
+                <div class="back-btn"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        jQuery("#btn-1").click(function(){
+            var a=jQuery("#btn-1").attr("value")
+            if(a == "-"){
+                jQuery("#image1").hide()
+                jQuery("#btn-1").attr("value","+")
+               
+            }
+            else{
+                jQuery("#image1").show()
+                jQuery("#btn-1").attr("value","-")
+                jQuery("#image2").hide()
+                jQuery("#btn-2").attr("value","+")
+                jQuery("#image3").hide()
+                jQuery("#btn-3").attr("value","+")
+            }
+        })
+        jQuery("#btn-2").click(function(){
+            var a=jQuery("#btn-2").attr("value")
+            if(a == "-"){
+                jQuery("#image2").hide()
+                jQuery("#btn-2").attr("value","+")
+               
+            }
+            else{
+                jQuery("#image2").show()
+                jQuery("#btn-2").attr("value","-")
+                jQuery("#image1").hide()
+                jQuery("#btn-1").attr("value","+")
+                jQuery("#image3").hide()
+                jQuery("#btn-3").attr("value","+")
+            }
+        })
+        jQuery("#btn-3").click(function(){
+            var a=jQuery("#btn-3").attr("value")
+            if(a == "-"){
+                jQuery("#image3").hide()
+                jQuery("#btn-3").attr("value","+")
+               
+            }
+            else{
+                jQuery("#image3").show()
+                jQuery("#btn-3").attr("value","-")
+                jQuery("#image2").hide()
+                jQuery("#btn-2").attr("value","+")
+                jQuery("#image1").hide()
+                jQuery("#btn-1").attr("value","+")
+            }
+        })
+    </script>
+</body>
+</html>
